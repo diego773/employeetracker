@@ -1,5 +1,7 @@
+const inquirer = require("inquirer");
 const db = require("./db");
-require("console.table");
+const consoleTable = require("console.table");
+const { prompt } = require("inquirer");
 
 async function viewEmployees() {
   let allEmployees = await db.selectAllEmployees();
@@ -7,3 +9,12 @@ async function viewEmployees() {
 }
 
 viewEmployees();
+
+const addEmployees = () => {
+  prompt({
+    type: "list",
+    name: "employeeToAdd",
+    message: "What type of employee would you like to add?",
+    choices: ["Sales lead"],
+  });
+};
