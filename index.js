@@ -15,6 +15,15 @@ const addEmployees = () => {
     type: "list",
     name: "employeeToAdd",
     message: "What type of employee would you like to add?",
-    choices: ["Sales lead"],
+    choices: [
+      "Sales lead",
+      "Sales person",
+      "Lead engineer",
+      "Software engineer",
+      "Account manager",
+      "Accountant",
+      "Legal team lead",
+      "Lawyer",
+    ],
   });
 };
